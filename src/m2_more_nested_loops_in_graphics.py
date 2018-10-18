@@ -60,7 +60,7 @@ def draw_upside_down_wall(rectangle, n, window):
             rectangle.move_by(rectangle.get_width(), 0)
         rectangle.move_by(-1*(rectangle.get_width()*(i+1))-rectangle.get_width()/2, -rectangle.get_height())
 
-        
+
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
