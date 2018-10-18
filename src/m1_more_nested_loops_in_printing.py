@@ -138,6 +138,7 @@ def triangle_upside_down(r):
             to_be_added += 1
         print(placeholder_str)
 
+
 def run_test_vee():
     """ Tests the    vee    function. """
     print()
@@ -179,7 +180,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -187,6 +188,23 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for i in range(r):
+        placeholder_str = ''
+        to_be_added = 1
+        range_2 = r - i
+        for k in range(range_2, r):
+            placeholder_str += ' '
+        for j in range(range_2):
+            placeholder_str += str(to_be_added)
+            to_be_added += 1
+        placeholder_str += '-'
+        to_be_added -= 1
+        for l in range(range_2):
+            placeholder_str += str(to_be_added)
+            to_be_added -= 1
+        for m in range(range_2, r):
+            placeholder_str += ' '
+        print(placeholder_str)
 
 
 def run_test_numbers_constant_forward():
@@ -235,7 +253,7 @@ def numbers_constant_forward(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -245,6 +263,14 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for i in range(r):
+        for k in range(maxnum):
+            placeholder_string = ''
+            repeated_number = k+1
+            for j in range(n):
+                placeholder_string = placeholder_string + str(repeated_number)
+            print(placeholder_string, end=' ')
+        print()
 
 
 def run_test_numbers_constant_backwards():
@@ -279,7 +305,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -287,6 +313,14 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for i in range(r):
+        for k in range(maxnum):
+            placeholder_string = ''
+            repeated_number = maxnum - k
+            for j in range(n):
+                placeholder_string = placeholder_string + str(repeated_number)
+            print(placeholder_string, end=' ')
+        print()
 
 
 def run_test_numbers_increasing_forward():
@@ -331,7 +365,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -339,7 +373,14 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(r):
+        for k in range(maxnum):
+            placeholder_string = ''
+            repeated_number = k+1
+            for j in range(k+1):
+                placeholder_string = placeholder_string + str(repeated_number)
+            print(placeholder_string, end=' ')
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
